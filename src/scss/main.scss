@@ -1,0 +1,66 @@
+@mixin for-size($size) {
+  @if $size == xs {
+    @media (min-width: 576px) { @content; }
+  } @else if $size == sm {
+    @media (min-width: 768px) { @content; }
+  } @else if $size == md {
+    @media (min-width: 992px) { @content; }
+  } @else if $size == lg {
+    @media (min-width: 1200px) { @content; }
+  } @else if $size == elg {
+    @media (min-width: 1800px) { @content; }
+  }
+}
+
+
+// @import "../bootstrap/bootstrap";
+
+@import "../../node_modules/aos/dist/aos";
+@import "../scss/normolize";
+@import "../scss/variables";
+@import "../scss/print";
+@import "../plugins/modal/modal";
+@import "../plugins/swiper/swiper";
+@import "../plugins/menu/menu";
+@import "../plugins/accordion/accordion";
+@import "../plugins/animaton/animaton";
+@import "../plugins/checkbox-radio/checkbox-radio";
+@import "../plugins/back-to-top-btn/back-to-top-btn";
+@import "../plugins/dropdown/dropdown";
+@import "../plugins/flex-grid/flex-grid";
+@import "../plugins/ibg/ibg";
+@import "../plugins/inputfile/inputfile";
+@import "../plugins/inputnumber/inputnumber";
+@import "../plugins/nouislider/nouislider";
+@import "../plugins/responsive-flex-table/responsive-flex-table";
+@import "../plugins/scroll-menu-anchors/scroll-menu-anchors";
+@import "../plugins/select/select";
+@import "../plugins/tabs/tabs";
+@import "../plugins/tooltip/tooltip";
+@import "../plugins/baron-custom-scroll/baron-custom-scroll";
+@import "../plugins/fullpage/fullpage";
+
+/*
+body{
+  background: url(../img/background-img/vector.svg);
+}*/
+
+
+@mixin font-face($font-name, $path, $weight: normal, $style: normal) {
+  @font-face {
+    font-family: quote($font-name);
+    src:
+      url(#{$path}.woff) format("woff"),
+      url(#{$path}.eot?#iefix) format('embedded-opentype'), 
+      url(#{$path}.ttf) format("truetype");
+    font-weight: $weight;
+    font-style: $style;
+  }
+}
+
+@include font-face('BebasNeueCyrillic', '../fonts/BebasNeueCyrillic', normal, 'normal');
+
+
+*{
+font-family: 'BebasNeueCyrillic'; 
+}
