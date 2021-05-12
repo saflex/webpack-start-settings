@@ -44,6 +44,6 @@
     "jquery": "^3.5.0",
     "nouislider": "^14.2.0",
     "popper.js": "^1.16.1",
-    "swiper": "^5.3.8"
+    "swiper": "^6.5.1"
   }
 }
